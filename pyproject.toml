@@ -1,0 +1,57 @@
+[project]
+name = "djprep"
+version = "0.1.0"
+description = "AI-assisted DJ track preparation: analysis, cue/loop recommendation, and DJ-software export"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24",
+  "scipy>=1.10",
+  "librosa>=0.10",
+  "soundfile>=0.12",
+  "pydantic>=2.5",
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.27",
+  "python-multipart>=0.0.9",
+]
+
+[project.optional-dependencies]
+separation = ["demucs>=4.0", "torch>=2.0"]
+dev = ["pytest>=8.0", "pytest-cov", "ruff", "mypy", "httpx"]
+
+[project.scripts]
+djprep = "djprep.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["backend"]
+
+[tool.setuptools.package-data]
+djprep = ["data/*.json"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+# Explicit rather than inherited: pinning the rule set means a ruff upgrade
+# cannot fail CI on rules the project never opted into.
+select = ["E", "F", "W", "I", "UP", "B", "SIM", "C4", "PERF", "RUF"]
+ignore = [
+  "E501",    # line length is handled by the formatter
+  "B008",    # FastAPI's Depends()/File() in defaults is the documented idiom
+  "RUF012",  # mutable class attrs: pydantic models handle this themselves
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Scripts are executables: a late sys.path insert before importing the package
+# is deliberate so they run from a checkout without installation.
+"scripts/*.py" = ["E402"]
+"backend/tests/*.py" = ["E402"]
+"backend/djprep/export/__init__.py" = ["F401"]
+"backend/djprep/models/__init__.py" = ["F401"]
+
+[tool.pytest.ini_options]
+testpaths = ["backend/tests"]

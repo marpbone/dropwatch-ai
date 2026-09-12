@@ -1,0 +1,51 @@
+{
+  "_comment": [
+    "Vendor colour palettes. These are DATA, not code: they describe third-party",
+    "software that changes between versions, and they are the only place in the",
+    "project that needs updating when it does.",
+    "",
+    "IMPORTANT: the rekordbox_hotcue values below are a close approximation of the",
+    "16 colours Rekordbox surfaces in its hot cue palette, good enough that",
+    "perceptual snapping picks the intended hue. They are not guaranteed to be",
+    "byte-exact against any particular Rekordbox build. Run",
+    "scripts/extract_rekordbox_palette.py against a local Rekordbox installation",
+    "to replace them with the exact values from your version -- the export code",
+    "reads whatever is in this file and needs no changes."
+  ],
+  "rekordbox_hotcue": {
+    "name": "Rekordbox hot cue palette",
+    "source": "approximation; see scripts/extract_rekordbox_palette.py",
+    "colors": [
+      {"id": 1,  "name": "Pink",        "r": 249, "g": 89,  "b": 172},
+      {"id": 2,  "name": "Red",         "r": 222, "g": 68,  "b": 68},
+      {"id": 3,  "name": "Orange",      "r": 240, "g": 128, "b": 41},
+      {"id": 4,  "name": "Yellow",      "r": 240, "g": 200, "b": 41},
+      {"id": 5,  "name": "Green",       "r": 128, "g": 200, "b": 41},
+      {"id": 6,  "name": "Celadon",     "r": 65,  "g": 200, "b": 120},
+      {"id": 7,  "name": "Turquoise",   "r": 41,  "g": 200, "b": 200},
+      {"id": 8,  "name": "Blue",        "r": 48,  "g": 145, "b": 220},
+      {"id": 9,  "name": "Violet",      "r": 130, "g": 100, "b": 220},
+      {"id": 10, "name": "Purple",      "r": 180, "g": 80,  "b": 210},
+      {"id": 11, "name": "Magenta",     "r": 220, "g": 60,  "b": 160},
+      {"id": 12, "name": "Lime",        "r": 190, "g": 220, "b": 50},
+      {"id": 13, "name": "Aqua",        "r": 60,  "g": 190, "b": 240},
+      {"id": 14, "name": "Deep Blue",   "r": 40,  "g": 90,  "b": 200},
+      {"id": 15, "name": "Coral",       "r": 240, "g": 110, "b": 100},
+      {"id": 16, "name": "White",       "r": 235, "g": 235, "b": 235}
+    ]
+  },
+  "serato_hotcue": {
+    "name": "Serato hot cue palette",
+    "source": "approximation",
+    "colors": [
+      {"id": 1, "name": "Red",    "r": 204, "g": 0,   "b": 0},
+      {"id": 2, "name": "Orange", "r": 204, "g": 136, "b": 0},
+      {"id": 3, "name": "Yellow", "r": 204, "g": 204, "b": 0},
+      {"id": 4, "name": "Green",  "r": 0,   "g": 204, "b": 0},
+      {"id": 5, "name": "Cyan",   "r": 0,   "g": 204, "b": 204},
+      {"id": 6, "name": "Blue",   "r": 0,   "g": 0,   "b": 204},
+      {"id": 7, "name": "Purple", "r": 136, "g": 0,   "b": 204},
+      {"id": 8, "name": "Pink",   "r": 204, "g": 0,   "b": 136}
+    ]
+  }
+}

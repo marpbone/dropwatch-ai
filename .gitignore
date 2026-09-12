@@ -1,0 +1,23 @@
+@'
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+build/
+dist/
+node_modules/
+frontend/dist/
+.venv/
+venv/
+.DS_Store
+*.db
+*.db-wal
+*.db-shm
+/annotations/
+results.csv
+
+# The synthetic fixture is generated, not committed (26 MB of WAV).
+backend/tests/fixtures/*.wav
+'@ | Set-Content -Encoding UTF8 .gitignore

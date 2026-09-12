@@ -1,0 +1,84 @@
+{
+  "bpm": 128.0,
+  "beats_per_bar": 4,
+  "anchor_sec": 0.0,
+  "phrase_bars": 8,
+  "bar_sec": 1.875,
+  "duration_sec": 301.0,
+  "sections": [
+    {
+      "label": "intro",
+      "start_bar": 0,
+      "end_bar": 16,
+      "start_sec": 0.0,
+      "end_sec": 30.0
+    },
+    {
+      "label": "buildup",
+      "start_bar": 16,
+      "end_bar": 32,
+      "start_sec": 30.0,
+      "end_sec": 60.0
+    },
+    {
+      "label": "drop",
+      "start_bar": 32,
+      "end_bar": 64,
+      "start_sec": 60.0,
+      "end_sec": 120.0
+    },
+    {
+      "label": "breakdown",
+      "start_bar": 64,
+      "end_bar": 96,
+      "start_sec": 120.0,
+      "end_sec": 180.0
+    },
+    {
+      "label": "buildup",
+      "start_bar": 96,
+      "end_bar": 112,
+      "start_sec": 180.0,
+      "end_sec": 210.0
+    },
+    {
+      "label": "drop",
+      "start_bar": 112,
+      "end_bar": 144,
+      "start_sec": 210.0,
+      "end_sec": 270.0
+    },
+    {
+      "label": "outro",
+      "start_bar": 144,
+      "end_bar": 160,
+      "start_sec": 270.0,
+      "end_sec": 300.0
+    }
+  ],
+  "vocal_regions": [
+    {
+      "start_bar": 68,
+      "end_bar": 92,
+      "start_sec": 127.5,
+      "end_sec": 172.5
+    },
+    {
+      "start_bar": 116,
+      "end_bar": 132,
+      "start_sec": 217.5,
+      "end_sec": 247.5
+    }
+  ],
+  "drop_times_sec": [
+    60.0,
+    210.0
+  ],
+  "breakdown_times_sec": [
+    120.0
+  ],
+  "buildup_times_sec": [
+    30.0,
+    180.0
+  ]
+}
